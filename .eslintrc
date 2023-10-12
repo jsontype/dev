@@ -23,6 +23,7 @@
     "react/no-unescaped-entities": "off", // 문자열 내에서 " ' > } 가 쓰일 경우
     "react/prop-types": "off", // prop-types가 사용되고 있을 경우
     "no-unused-vars": "warn", // 사용하지 않는 변수, 함수가 있을 경우
-    "no-console": "error" // console.log가 있을 경우
+    "no-console": "error", // console.log가 있을 경우
+    "no-undef": "off" // 정의되지 않은 변수가 있을 경우
   }
 }
