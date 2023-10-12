@@ -4,7 +4,7 @@
     <PerfectScrollbar className="h-200px p-3">
       <div className="widget-chat">
         <div className="widget-chat-item">
-          <div className="widget-chat-media"><img src="/assets/img/user/user-2.jpg" alt="" /></div>
+          <div className="widget-chat-media"><img src="/Assets/img/user/user-2.jpg" alt="" /></div>
           <div className="widget-chat-content">
             <div className="widget-chat-name">Roberto Lambert</div>
             <div className="widget-chat-message last">

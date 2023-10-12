@@ -6,21 +6,21 @@
     "orderTime": "07:13",
     "items": [
       {
-        "image": "/assets/img/pos/product-2.jpg",
+        "image": "/Assets/img/pos/product-2.jpg",
         "title": "Pork Burger",
         "quantity": "1",
         "status": "",
         "note": ["large size", "extra cheese"]
       },
       {
-        "image": "/assets/img/pos/product-14.jpg",
+        "image": "/Assets/img/pos/product-14.jpg",
         "title": "Macarons",
         "status": "",
         "quantity": "1",
         "note": ["serve after dishes"]
       },
       {
-        "image": "/assets/img/pos/product-8.jpg",
+        "image": "/Assets/img/pos/product-8.jpg",
         "title": "Vita C Detox Juice",
         "status": "Completed",
         "quantity": "1",
@@ -36,28 +36,28 @@
     "urgent": true,
     "items": [
       {
-        "image": "/assets/img/pos/product-11.jpg",
+        "image": "/Assets/img/pos/product-11.jpg",
         "title": "Baked chicken wing",
         "quantity": "1",
         "status": "",
         "note": ["6 pieces", "honey source"]
       },
       {
-        "image": "/assets/img/pos/product-12.jpg",
+        "image": "/Assets/img/pos/product-12.jpg",
         "title": "Veggie Spaghetti",
         "status": "Completed",
         "quantity": "1",
         "note": ["serve after dishes"]
       },
       {
-        "image": "/assets/img/pos/product-7.jpg",
+        "image": "/Assets/img/pos/product-7.jpg",
         "title": "Coffee Latte",
         "status": "Completed",
         "quantity": "1",
         "note": ["no sugar", "more cream"]
       },
       {
-        "image": "/assets/img/pos/product-1.jpg",
+        "image": "/Assets/img/pos/product-1.jpg",
         "title": "Grill Chicken Chop",
         "status": "Completed",
         "quantity": "1",
@@ -74,21 +74,21 @@
     "totalOrderTime": "12:30",
     "items": [
       {
-        "image": "/assets/img/pos/product-2.jpg",
+        "image": "/Assets/img/pos/product-2.jpg",
         "title": "Pork Burger",
         "status": "Completed",
         "quantity": "1",
         "note": ["large size", "extra cheese"]
       },
       {
-        "image": "/assets/img/pos/product-10.jpg",
+        "image": "/Assets/img/pos/product-10.jpg",
         "title": "Mushroom soup",
         "status": "Completed",
         "quantity": "1",
         "note": ["ala carte", "more cheese"]
       },
       {
-        "image": "/assets/img/pos/product-8.jpg",
+        "image": "/Assets/img/pos/product-8.jpg",
         "title": "Vita C Detox Juice",
         "status": "Completed",
         "quantity": "1",
@@ -105,14 +105,14 @@
     "totalOrderTime": "12:30",
     "items": [
       {
-        "image": "/assets/img/pos/product-13.jpg",
+        "image": "/Assets/img/pos/product-13.jpg",
         "title": "Vanilla Ice Cream",
         "status": "Completed",
         "quantity": "1",
         "note": ["ala carte"]
       },
       {
-        "image": "/assets/img/pos/product-9.jpg",
+        "image": "/Assets/img/pos/product-9.jpg",
         "title": "Pancake",
         "status": "Completed",
         "quantity": "1",
@@ -129,21 +129,21 @@
     "totalOrderTime": "22:28",
     "items": [
       {
-        "image": "/assets/img/pos/product-4.jpg",
+        "image": "/Assets/img/pos/product-4.jpg",
         "title": "Vegan Salad Bowl®",
         "status": "Completed",
         "quantity": "1",
         "note": ["ala carte"]
       },
       {
-        "image": "/assets/img/pos/product-6.jpg",
+        "image": "/Assets/img/pos/product-6.jpg",
         "title": "Avocado Shake",
         "status": "Completed",
         "quantity": "1",
         "note": ["ala carte"]
       },
       {
-        "image": "/assets/img/pos/product-5.jpg",
+        "image": "/Assets/img/pos/product-5.jpg",
         "title": "Hawaiian Pizza®",
         "status": "Completed",
         "quantity": "1",
