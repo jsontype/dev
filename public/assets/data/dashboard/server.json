@@ -16,9 +16,7 @@
         "class": "text-theme text-opacity-50"
       }
     ],
-    "chartData": [
-      53, 64, 88, 90, 38
-    ],
+    "chartData": [53, 64, 88, 90, 38],
     "chartType": "donut",
     "chartHeight": 50
   },
@@ -39,9 +37,7 @@
         "class": "text-theme text-opacity-50"
       }
     ],
-    "chartData": [
-      23, 54, 54, 72, 75
-    ],
+    "chartData": [23, 54, 54, 72, 75],
     "chartType": "donut",
     "chartHeight": 50
   }

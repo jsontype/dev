@@ -19,9 +19,7 @@
     "chartData": [
       {
         "name": "Visitors",
-        "data": [
-          69, 34, 70, 73, 41, 32, 73, 72, 89, 57, 42, 86, 78
-        ]
+        "data": [69, 34, 70, 73, 41, 32, 73, 72, 89, 57, 42, 86, 78]
       }
     ],
     "chartType": "bar",
@@ -47,9 +45,7 @@
     "chartData": [
       {
         "name": "Sales",
-        "data": [
-          81, 89, 71, 75, 53, 47, 78, 33, 71, 81, 45, 43, 68
-        ]
+        "data": [81, 89, 71, 75, 53, 47, 78, 33, 71, 81, 45, 43, 68]
       }
     ],
     "chartType": "line",
@@ -72,9 +68,7 @@
         "text": "15.25% from youtube"
       }
     ],
-    "chartData": [
-      77, 80, 70
-    ],
+    "chartData": [77, 80, 70],
     "chartType": "pie",
     "chartHeight": 45
   },
@@ -95,9 +89,7 @@
         "text": "2MB per visit"
       }
     ],
-    "chartData": [
-      83, 74, 58, 70, 78
-    ],
+    "chartData": [83, 74, 58, 70, 78],
     "chartType": "donut",
     "chartHeight": 45
   }

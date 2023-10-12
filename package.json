@@ -69,7 +69,9 @@
     "start": "react-scripts start",
     "build": "react-scripts --max_old_space_size=4096 build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -85,5 +87,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
   }
 }
