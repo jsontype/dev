@@ -29,11 +29,11 @@ npm start // localhost:3000으로 연다.
 프로덕션 모드에서 React를 올바르게 번들링하고 빌드를 최적화하여 최상의 성능을 제공한다.<br>
 빌드는 최소화되고 파일 이름에는 해시가 포함된다.<br>
 
-### npm lint
+### npm run lint
 
 eslint를 통해 lint 오류가 있는지 테스트한다.
 
-### npm lint:fix
+### npm run lint:fix
 
 eslint를 통해 lint 오류가 있는지 테스트하고, 있을 경우 자동 수정한다.
 
@@ -44,3 +44,7 @@ prettier를 통해 format 오류가 있는지 테스트한다.
 ### npm run format:fix
 
 prettier를 통해 format 오류가 있는지 테스트하고, 있을 경우 자동 수정한다.
+
+### npm run check
+
+lint와 format 오류가 있는지 테스트하고, 있을 경우 자동 수정한다.
