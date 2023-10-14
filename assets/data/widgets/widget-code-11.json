@@ -13,11 +13,11 @@
   <hr className="m-0" />
   <CardBody>
     <div className="widget-img-list">
-      <div className="widget-img-list-item"><a href="/Assets/img/gallery/gallery-1.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-1.jpg)'}}></span></a></div>
-      <div className="widget-img-list-item"><a href="/Assets/img/gallery/gallery-2.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-2.jpg)'}}></span></a></div>
-      <div className="widget-img-list-item"><a href="/Assets/img/gallery/gallery-3.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-3.jpg)'}}></span></a></div>
-      <div className="widget-img-list-item"><a href="/Assets/img/gallery/gallery-4.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-4.jpg)'}}></span></a></div>
-      <div className="widget-img-list-item"><a href="/Assets/img/gallery/gallery-5.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-5.jpg)'}}></span></a></div>
+      <div className="widget-img-list-item"><a href="/assets/img/gallery/gallery-1.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-1.jpg)'}}></span></a></div>
+      <div className="widget-img-list-item"><a href="/assets/img/gallery/gallery-2.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-2.jpg)'}}></span></a></div>
+      <div className="widget-img-list-item"><a href="/assets/img/gallery/gallery-3.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-3.jpg)'}}></span></a></div>
+      <div className="widget-img-list-item"><a href="/assets/img/gallery/gallery-4.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-4.jpg)'}}></span></a></div>
+      <div className="widget-img-list-item"><a href="/assets/img/gallery/gallery-5.jpg" data-lity><span className="img" style={{backgroundImage: 'url(/assets/img/gallery/gallery-5.jpg)'}}></span></a></div>
       ...
     </div>
   </CardBody>

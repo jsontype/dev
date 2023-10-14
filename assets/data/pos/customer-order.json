@@ -45,7 +45,7 @@
       "title": "Grill Chicken Chop®",
       "description": "chicken, egg, mushroom, salad",
       "price": "10.99",
-      "image": "/Assets/img/pos/product-1.jpg",
+      "image": "/assets/img/pos/product-1.jpg",
       "type": "meat",
       "available": true,
       "options": {
@@ -88,7 +88,7 @@
       "title": "Grill Pork Chop®",
       "description": "pork, egg, mushroom, salad",
       "price": "12.99",
-      "image": "/Assets/img/pos/product-2.jpg",
+      "image": "/assets/img/pos/product-2.jpg",
       "type": "meat",
       "available": true,
       "options": {
@@ -131,7 +131,7 @@
       "title": "Capellini Tomato Sauce®",
       "description": "spaghetti, tomato, mushroom",
       "price": "11.99",
-      "image": "/Assets/img/pos/product-3.jpg",
+      "image": "/assets/img/pos/product-3.jpg",
       "type": "meat",
       "available": true,
       "options": {
@@ -166,7 +166,7 @@
       "title": "Vegan Salad Bowl®",
       "description": "apple, carrot, tomato",
       "price": "6.99",
-      "image": "/Assets/img/pos/product-4.jpg",
+      "image": "/assets/img/pos/product-4.jpg",
       "type": "meat",
       "available": true,
       "options": {
@@ -191,7 +191,7 @@
       "title": "Hawaiian Pizza®",
       "description": "pizza, crab meat, pineapple",
       "price": "20.99",
-      "image": "/Assets/img/pos/product-5.jpg",
+      "image": "/assets/img/pos/product-5.jpg",
       "type": "pizza",
       "available": true,
       "options": {
@@ -226,7 +226,7 @@
       "title": "Perfect Burger",
       "description": "Dill pickle, cheddar cheese, tomato, red onion, ground chuck beef",
       "price": "8.99",
-      "image": "/Assets/img/pos/product-17.jpg",
+      "image": "/assets/img/pos/product-17.jpg",
       "type": "burger",
       "available": false,
       "options": {
@@ -261,7 +261,7 @@
       "title": "Avocado Shake",
       "description": "avocado, milk, vanilla",
       "price": "3.99",
-      "image": "/Assets/img/pos/product-6.jpg",
+      "image": "/assets/img/pos/product-6.jpg",
       "type": "drinks",
       "available": true,
       "options": {
@@ -286,7 +286,7 @@
       "title": "Coffee Latte",
       "description": "espresso, milk",
       "price": "2.99",
-      "image": "/Assets/img/pos/product-7.jpg",
+      "image": "/assets/img/pos/product-7.jpg",
       "type": "drinks",
       "available": true,
       "options": {
@@ -311,7 +311,7 @@
       "title": "Vita C Detox Juice",
       "description": "apricot, apple, carrot and ginger juice",
       "price": "2.99",
-      "image": "/Assets/img/pos/product-8.jpg",
+      "image": "/assets/img/pos/product-8.jpg",
       "type": "drinks",
       "available": true,
       "options": {
@@ -336,7 +336,7 @@
       "title": "Pancake",
       "description": "Non dairy, egg, baking soda, sugar, all purpose flour",
       "price": "5.99",
-      "image": "/Assets/img/pos/product-9.jpg",
+      "image": "/assets/img/pos/product-9.jpg",
       "type": "snacks",
       "available": true,
       "options": {
@@ -361,7 +361,7 @@
       "title": "Mushroom soup",
       "description": "Evaporated milk, marsala wine, beef cubes, chicken broth, butter",
       "price": "3.99",
-      "image": "/Assets/img/pos/product-10.jpg",
+      "image": "/assets/img/pos/product-10.jpg",
       "type": "snacks",
       "available": true,
       "options": {
@@ -386,7 +386,7 @@
       "title": "Baked chicken wing",
       "description": "Chicken wings, a1 steak sauce, honey, cayenne pepper",
       "price": "6.99",
-      "image": "/Assets/img/pos/product-11.jpg",
+      "image": "/assets/img/pos/product-11.jpg",
       "type": "snacks",
       "available": true,
       "options": {
@@ -411,7 +411,7 @@
       "title": "Veggie Spaghetti",
       "description": "Yellow squash, pasta, roasted red peppers, zucchini",
       "price": "12.99",
-      "image": "/Assets/img/pos/product-12.jpg",
+      "image": "/assets/img/pos/product-12.jpg",
       "type": "meat",
       "available": true,
       "options": {
@@ -436,7 +436,7 @@
       "title": "Vanilla Ice Cream",
       "description": "Heavy whipping cream, white sugar, vanilla extract",
       "price": "3.99",
-      "image": "/Assets/img/pos/product-13.jpg",
+      "image": "/assets/img/pos/product-13.jpg",
       "type": "desserts",
       "available": true,
       "options": {
@@ -461,7 +461,7 @@
       "title": "Perfect Yeast Doughnuts",
       "description": "Chocolate hazelnut spread, bread flour, doughnuts, quick rise yeast, butter",
       "price": "2.99",
-      "image": "/Assets/img/pos/product-14.jpg",
+      "image": "/assets/img/pos/product-14.jpg",
       "type": "desserts",
       "available": true,
       "options": {
@@ -486,7 +486,7 @@
       "title": "Macarons",
       "description": "Almond flour, egg whites, heavy cream, food coloring, powdered sugar",
       "price": "4.99",
-      "image": "/Assets/img/pos/product-15.jpg",
+      "image": "/assets/img/pos/product-15.jpg",
       "type": "desserts",
       "available": true,
       "options": {
@@ -511,7 +511,7 @@
       "title": "Perfect Vanilla Cupcake",
       "description": "Baking powder, all purpose flour, plain kefir, vanilla extract",
       "price": "2.99",
-      "image": "/Assets/img/pos/product-16.jpg",
+      "image": "/assets/img/pos/product-16.jpg",
       "type": "desserts",
       "available": true,
       "options": {
@@ -535,7 +535,7 @@
   "order": [
     {
       "id": 1,
-      "image": "/Assets/img/pos/product-2.jpg",
+      "image": "/assets/img/pos/product-2.jpg",
       "title": "Grill Pork Chop",
       "price": "12.99",
       "options": [
@@ -548,7 +548,7 @@
     },
     {
       "id": 2,
-      "image": "/Assets/img/pos/product-8.jpg",
+      "image": "/assets/img/pos/product-8.jpg",
       "title": "Orange Juice",
       "price": "5.00",
       "options": [
@@ -565,7 +565,7 @@
     },
     {
       "id": 3,
-      "image": "/Assets/img/pos/product-1.jpg",
+      "image": "/assets/img/pos/product-1.jpg",
       "title": "Grill chicken chop",
       "price": "10.99",
       "options": [
@@ -582,7 +582,7 @@
     },
     {
       "id": 4,
-      "image": "/Assets/img/pos/product-5.jpg",
+      "image": "/assets/img/pos/product-5.jpg",
       "title": "Hawaiian Pizza",
       "price": "15.00",
       "options": [
@@ -599,7 +599,7 @@
     },
     {
       "id": 5,
-      "image": "/Assets/img/pos/product-10.jpg",
+      "image": "/assets/img/pos/product-10.jpg",
       "title": "Mushroom Soup",
       "price": "3.99",
       "options": [

@@ -9,56 +9,56 @@
     "orderNo": "0001",
     "orders": [
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Grill Pork Chop",
         "quantity": 1,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-8.jpg",
+        "image": "/assets/img/pos/product-8.jpg",
         "title": "Orange Juice",
         "quantity": 2,
         "price": "5.00",
         "options": ["size: large", "less ice"]
       },
       {
-        "image": "/Assets/img/pos/product-13.jpg",
+        "image": "/assets/img/pos/product-13.jpg",
         "title": "Vanilla Ice-cream",
         "quantity": 1,
         "price": "3.99",
         "options": ["scoop: 1", "flavour: vanilla"]
       },
       {
-        "image": "/Assets/img/pos/product-1.jpg",
+        "image": "/assets/img/pos/product-1.jpg",
         "title": "Grill Chicken Chop",
         "quantity": 1,
         "price": "3.99",
         "options": ["size: large", "spicy: medium"]
       },
       {
-        "image": "/Assets/img/pos/product-10.jpg",
+        "image": "/assets/img/pos/product-10.jpg",
         "title": "Mushroom Soup",
         "quantity": 1,
         "price": "3.99",
         "options": ["size: large", "more cheese"]
       },
       {
-        "image": "/Assets/img/pos/product-15.jpg",
+        "image": "/assets/img/pos/product-15.jpg",
         "title": "Hawaiian Pizza",
         "quantity": 1,
         "price": "15.00",
         "options": ["size: large", "more onion"]
       },
       {
-        "image": "/Assets/img/pos/product-14.jpg",
+        "image": "/assets/img/pos/product-14.jpg",
         "title": "Perfect Yeast Doughnuts",
         "quantity": 1,
         "price": "2.99",
         "options": ["size: medium", "flavour: random"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Macarons",
         "quantity": 1,
         "price": "4.99",
@@ -76,84 +76,84 @@
     "orderNo": "0002",
     "orders": [
       {
-        "image": "/Assets/img/pos/product-7.jpg",
+        "image": "/assets/img/pos/product-7.jpg",
         "title": "Coffee Latte",
         "quantity": 5,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-8.jpg",
+        "image": "/assets/img/pos/product-8.jpg",
         "title": "Vita C Detox Juice",
         "quantity": 6,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-9.jpg",
+        "image": "/assets/img/pos/product-9.jpg",
         "title": "Pancake",
         "quantity": 6,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-10.jpg",
+        "image": "/assets/img/pos/product-10.jpg",
         "title": "Mushroom soup",
         "quantity": 8,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Grill Pork Chop",
         "quantity": 1,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-8.jpg",
+        "image": "/assets/img/pos/product-8.jpg",
         "title": "Orange Juice",
         "quantity": 2,
         "price": "5.00",
         "options": ["size: large", "less ice"]
       },
       {
-        "image": "/Assets/img/pos/product-13.jpg",
+        "image": "/assets/img/pos/product-13.jpg",
         "title": "Vanilla Ice-cream",
         "quantity": 1,
         "price": "3.99",
         "options": ["scoop: 1", "flavour: vanilla"]
       },
       {
-        "image": "/Assets/img/pos/product-1.jpg",
+        "image": "/assets/img/pos/product-1.jpg",
         "title": "Grill Chicken Chop",
         "quantity": 1,
         "price": "3.99",
         "options": ["size: large", "spicy: medium"]
       },
       {
-        "image": "/Assets/img/pos/product-10.jpg",
+        "image": "/assets/img/pos/product-10.jpg",
         "title": "Mushroom Soup",
         "quantity": 1,
         "price": "3.99",
         "options": ["size: large", "more cheese"]
       },
       {
-        "image": "/Assets/img/pos/product-15.jpg",
+        "image": "/assets/img/pos/product-15.jpg",
         "title": "Hawaiian Pizza",
         "quantity": 1,
         "price": "15.00",
         "options": ["size: large", "more onion"]
       },
       {
-        "image": "/Assets/img/pos/product-14.jpg",
+        "image": "/assets/img/pos/product-14.jpg",
         "title": "Perfect Yeast Doughnuts",
         "quantity": 1,
         "price": "2.99",
         "options": ["size: medium", "flavour: random"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Macarons",
         "quantity": 1,
         "price": "4.99",
@@ -195,35 +195,35 @@
     "orderNo": "0003",
     "orders": [
       {
-        "image": "/Assets/img/pos/product-10.jpg",
+        "image": "/assets/img/pos/product-10.jpg",
         "title": "Mushroom soup",
         "quantity": 8,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Grill Pork Chop",
         "quantity": 1,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-8.jpg",
+        "image": "/assets/img/pos/product-8.jpg",
         "title": "Orange Juice",
         "quantity": 2,
         "price": "5.00",
         "options": ["size: large", "less ice"]
       },
       {
-        "image": "/Assets/img/pos/product-13.jpg",
+        "image": "/assets/img/pos/product-13.jpg",
         "title": "Vanilla Ice-cream",
         "quantity": 1,
         "price": "3.99",
         "options": ["scoop: 1", "flavour: vanilla"]
       },
       {
-        "image": "/Assets/img/pos/product-1.jpg",
+        "image": "/assets/img/pos/product-1.jpg",
         "title": "Grill Chicken Chop",
         "quantity": 1,
         "price": "3.99",
@@ -240,42 +240,42 @@
     "totalTime": "58:40",
     "orders": [
       {
-        "image": "/Assets/img/pos/product-9.jpg",
+        "image": "/assets/img/pos/product-9.jpg",
         "title": "Pancake",
         "quantity": 6,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-10.jpg",
+        "image": "/assets/img/pos/product-10.jpg",
         "title": "Mushroom soup",
         "quantity": 8,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Grill Pork Chop",
         "quantity": 1,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-8.jpg",
+        "image": "/assets/img/pos/product-8.jpg",
         "title": "Orange Juice",
         "quantity": 2,
         "price": "5.00",
         "options": ["size: large", "less ice"]
       },
       {
-        "image": "/Assets/img/pos/product-13.jpg",
+        "image": "/assets/img/pos/product-13.jpg",
         "title": "Vanilla Ice-cream",
         "quantity": 1,
         "price": "3.99",
         "options": ["scoop: 1", "flavour: vanilla"]
       },
       {
-        "image": "/Assets/img/pos/product-1.jpg",
+        "image": "/assets/img/pos/product-1.jpg",
         "title": "Grill Chicken Chop",
         "quantity": 1,
         "price": "3.99",
@@ -292,14 +292,14 @@
     "totalTime": "05:12",
     "orders": [
       {
-        "image": "/Assets/img/pos/product-14.jpg",
+        "image": "/assets/img/pos/product-14.jpg",
         "title": "Perfect Yeast Doughnuts",
         "quantity": 1,
         "price": "2.99",
         "options": ["size: medium", "flavour: random"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Macarons",
         "quantity": 1,
         "price": "4.99",
@@ -316,28 +316,28 @@
     "totalTime": "52:58",
     "orders": [
       {
-        "image": "/Assets/img/pos/product-10.jpg",
+        "image": "/assets/img/pos/product-10.jpg",
         "title": "Mushroom Soup",
         "quantity": 1,
         "price": "3.99",
         "options": ["size: large", "more cheese"]
       },
       {
-        "image": "/Assets/img/pos/product-15.jpg",
+        "image": "/assets/img/pos/product-15.jpg",
         "title": "Hawaiian Pizza",
         "quantity": 1,
         "price": "15.00",
         "options": ["size: large", "more onion"]
       },
       {
-        "image": "/Assets/img/pos/product-14.jpg",
+        "image": "/assets/img/pos/product-14.jpg",
         "title": "Perfect Yeast Doughnuts",
         "quantity": 1,
         "price": "2.99",
         "options": ["size: medium", "flavour: random"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Macarons",
         "quantity": 1,
         "price": "4.99",
@@ -354,84 +354,84 @@
     "totalTime": "66.69",
     "orders": [
       {
-        "image": "/Assets/img/pos/product-7.jpg",
+        "image": "/assets/img/pos/product-7.jpg",
         "title": "Coffee Latte",
         "quantity": 5,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-8.jpg",
+        "image": "/assets/img/pos/product-8.jpg",
         "title": "Vita C Detox Juice",
         "quantity": 6,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-9.jpg",
+        "image": "/assets/img/pos/product-9.jpg",
         "title": "Pancake",
         "quantity": 6,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-10.jpg",
+        "image": "/assets/img/pos/product-10.jpg",
         "title": "Mushroom soup",
         "quantity": 8,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Grill Pork Chop",
         "quantity": 1,
         "price": "12.99",
         "options": ["size: large"]
       },
       {
-        "image": "/Assets/img/pos/product-8.jpg",
+        "image": "/assets/img/pos/product-8.jpg",
         "title": "Orange Juice",
         "quantity": 2,
         "price": "5.00",
         "options": ["size: large", "less ice"]
       },
       {
-        "image": "/Assets/img/pos/product-13.jpg",
+        "image": "/assets/img/pos/product-13.jpg",
         "title": "Vanilla Ice-cream",
         "quantity": 1,
         "price": "3.99",
         "options": ["scoop: 1", "flavour: vanilla"]
       },
       {
-        "image": "/Assets/img/pos/product-1.jpg",
+        "image": "/assets/img/pos/product-1.jpg",
         "title": "Grill Chicken Chop",
         "quantity": 1,
         "price": "3.99",
         "options": ["size: large", "spicy: medium"]
       },
       {
-        "image": "/Assets/img/pos/product-10.jpg",
+        "image": "/assets/img/pos/product-10.jpg",
         "title": "Mushroom Soup",
         "quantity": 1,
         "price": "3.99",
         "options": ["size: large", "more cheese"]
       },
       {
-        "image": "/Assets/img/pos/product-15.jpg",
+        "image": "/assets/img/pos/product-15.jpg",
         "title": "Hawaiian Pizza",
         "quantity": 1,
         "price": "15.00",
         "options": ["size: large", "more onion"]
       },
       {
-        "image": "/Assets/img/pos/product-14.jpg",
+        "image": "/assets/img/pos/product-14.jpg",
         "title": "Perfect Yeast Doughnuts",
         "quantity": 1,
         "price": "2.99",
         "options": ["size: medium", "flavour: random"]
       },
       {
-        "image": "/Assets/img/pos/product-2.jpg",
+        "image": "/assets/img/pos/product-2.jpg",
         "title": "Macarons",
         "quantity": 1,
         "price": "4.99",
