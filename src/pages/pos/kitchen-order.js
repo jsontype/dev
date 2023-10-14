@@ -47,7 +47,12 @@ function PosKitchenOrder() {
     context.setAppContentFullHeight(true)
     context.setAppContentClass('p-1 ps-xl-4 pe-xl-4 pt-xl-3 pb-xl-3')
 
-    fetch('/assets/data/pos/kitchen-order.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/pos/kitchen-order..json', option)
       .then(res => res.json())
       .then(result => {
         setOrderData(result)

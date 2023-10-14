@@ -257,7 +257,12 @@ function PosCustomerOrder() {
 
     setModal(new Modal(document.getElementById('modalPosItem')))
 
-    fetch('/assets/data/pos/customer-order.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/pos/customer-order..json', option)
       .then(res => res.json())
       .then(result => {
         setTableData(result)

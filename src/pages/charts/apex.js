@@ -1100,84 +1100,89 @@ function ChartApex() {
   }
 
   useEffect(() => {
-    fetch('/assets/data/chart/apexchart-code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/chart/apexchart-code-1.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode1(html)
       })
-    fetch('/assets/data/chart/apexchart-code-2.json')
+    fetch('/assets/data/chart/apexchart-code-2.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode2(html)
       })
-    fetch('/assets/data/chart/apexchart-code-3.json')
+    fetch('/assets/data/chart/apexchart-code-3.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode3(html)
       })
-    fetch('/assets/data/chart/apexchart-code-4.json')
+    fetch('/assets/data/chart/apexchart-code-4.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode4(html)
       })
-    fetch('/assets/data/chart/apexchart-code-5.json')
+    fetch('/assets/data/chart/apexchart-code-5.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode5(html)
       })
-    fetch('/assets/data/chart/apexchart-code-6.json')
+    fetch('/assets/data/chart/apexchart-code-6.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode6(html)
       })
-    fetch('/assets/data/chart/apexchart-code-7.json')
+    fetch('/assets/data/chart/apexchart-code-7.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode7(html)
       })
-    fetch('/assets/data/chart/apexchart-code-8.json')
+    fetch('/assets/data/chart/apexchart-code-8.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode8(html)
       })
-    fetch('/assets/data/chart/apexchart-code-9.json')
+    fetch('/assets/data/chart/apexchart-code-9.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode9(html)
       })
-    fetch('/assets/data/chart/apexchart-code-10.json')
+    fetch('/assets/data/chart/apexchart-code-10.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode10(html)
       })
-    fetch('/assets/data/chart/apexchart-code-11.json')
+    fetch('/assets/data/chart/apexchart-code-11.json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode11(html)
       })
-    fetch('/assets/data/chart/apexchart-code-12.json')
+    fetch('/assets/data/chart/apexchart-code-12.json', option)
       .then(function (response) {
         return response.text()
       })

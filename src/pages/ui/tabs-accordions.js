@@ -11,35 +11,40 @@ function UiTabsAccordions() {
   const [code5, setCode5] = useState()
 
   useEffect(() => {
-    fetch('/assets/data/ui/tabs-accordions-code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/ui/tabs-accordions-code-1..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode1(html)
       })
-    fetch('/assets/data/ui/tabs-accordions-code-2.json')
+    fetch('/assets/data/ui/tabs-accordions-code-2..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode2(html)
       })
-    fetch('/assets/data/ui/tabs-accordions-code-3.json')
+    fetch('/assets/data/ui/tabs-accordions-code-3..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode3(html)
       })
-    fetch('/assets/data/ui/tabs-accordions-code-4.json')
+    fetch('/assets/data/ui/tabs-accordions-code-4..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode4(html)
       })
-    fetch('/assets/data/ui/tabs-accordions-code-5.json')
+    fetch('/assets/data/ui/tabs-accordions-code-5..json', option)
       .then(function (response) {
         return response.text()
       })

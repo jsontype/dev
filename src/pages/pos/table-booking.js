@@ -110,7 +110,12 @@ function PosTableBooking() {
     context.setAppContentFullHeight(true)
     context.setAppContentClass('p-1 ps-xl-4 pe-xl-4 pt-xl-3 pb-xl-3')
 
-    fetch('/assets/data/pos/table-booking.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/pos/table-booking..json', option)
       .then(res => res.json())
       .then(result => {
         setTableData(result)

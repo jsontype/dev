@@ -8,7 +8,12 @@ function LayoutBoxedLayout() {
   const [code1, setCode1] = useState()
 
   useEffect(() => {
-    fetch('/assets/data/layout/boxed-layout-code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/layout/boxed-layout-code-1..json', option)
       .then(function (response) {
         return response.text()
       })

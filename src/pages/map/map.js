@@ -95,14 +95,19 @@ function Map() {
   }
 
   useEffect(() => {
-    fetch('/assets/data/map/code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/map/code-1..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode1(html)
       })
-    fetch('/assets/data/map/code-2.json')
+    fetch('/assets/data/map/code-2..json', option)
       .then(function (response) {
         return response.text()
       })

@@ -12,7 +12,12 @@ function EmailDetail() {
     context.setAppContentFullHeight(true)
     context.setAppContentClass('p-3')
 
-    fetch('/assets/data/email/inbox.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/email/inbox..json', option)
       .then(res => res.json())
       .then(result => {
         setMailData(result)

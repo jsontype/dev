@@ -14,7 +14,12 @@ function LayoutFullWidth() {
   }
 
   useEffect(() => {
-    fetch('/assets/data/layout/full-width-code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/layout/full-width-code-1..json', option)
       .then(function (response) {
         return response.text()
       })

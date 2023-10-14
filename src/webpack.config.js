@@ -26,11 +26,5 @@ module.exports = {
         ],
       },
     ],
-  },
-  // Resolve Object
-  resolve: {
-    alias: {
-      Assets: path.resolve(__dirname, 'src/assets/')
-    }
   }
 }

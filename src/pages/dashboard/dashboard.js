@@ -284,37 +284,42 @@ function Dashboard() {
   }
 
   useEffect(() => {
-    fetch('/assets/data/dashboard/stats.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/dashboard/stats..json', option)
       .then(res => res.json())
       .then(result => {
         setStatsData(result)
       })
-    fetch('/assets/data/dashboard/server.json')
+    fetch('/assets/data/dashboard/server..json', option)
       .then(res => res.json())
       .then(result => {
         setServerData(result)
       })
-    fetch('/assets/data/dashboard/country.json')
+    fetch('/assets/data/dashboard/country..json', option)
       .then(res => res.json())
       .then(result => {
         setCountryData(result)
       })
-    fetch('/assets/data/dashboard/source.json')
+    fetch('/assets/data/dashboard/source..json', option)
       .then(res => res.json())
       .then(result => {
         setSourceData(result)
       })
-    fetch('/assets/data/dashboard/source-chart.json')
+    fetch('/assets/data/dashboard/source-chart..json', option)
       .then(res => res.json())
       .then(result => {
         setSourceChartData(result)
       })
-    fetch('/assets/data/dashboard/product.json')
+    fetch('/assets/data/dashboard/product..json', option)
       .then(res => res.json())
       .then(result => {
         setProductData(result)
       })
-    fetch('/assets/data/dashboard/activity-log.json')
+    fetch('/assets/data/dashboard/activity-log..json', option)
       .then(res => res.json())
       .then(result => {
         setActivityLogData(result)

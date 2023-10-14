@@ -22,112 +22,117 @@ function Helper() {
   const [code16, setCode16] = useState()
 
   useEffect(() => {
-    fetch('/assets/data/helper/code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/helper/code-1..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode1(html)
       })
-    fetch('/assets/data/helper/code-2.json')
+    fetch('/assets/data/helper/code-2..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode2(html)
       })
-    fetch('/assets/data/helper/code-3.json')
+    fetch('/assets/data/helper/code-3..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode3(html)
       })
-    fetch('/assets/data/helper/code-4.json')
+    fetch('/assets/data/helper/code-4..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode4(html)
       })
-    fetch('/assets/data/helper/code-5.json')
+    fetch('/assets/data/helper/code-5..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode5(html)
       })
-    fetch('/assets/data/helper/code-6.json')
+    fetch('/assets/data/helper/code-6..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode6(html)
       })
-    fetch('/assets/data/helper/code-7.json')
+    fetch('/assets/data/helper/code-7..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode7(html)
       })
-    fetch('/assets/data/helper/code-8.json')
+    fetch('/assets/data/helper/code-8..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode8(html)
       })
-    fetch('/assets/data/helper/code-9.json')
+    fetch('/assets/data/helper/code-9..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode9(html)
       })
-    fetch('/assets/data/helper/code-10.json')
+    fetch('/assets/data/helper/code-10..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode10(html)
       })
-    fetch('/assets/data/helper/code-11.json')
+    fetch('/assets/data/helper/code-11..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode11(html)
       })
-    fetch('/assets/data/helper/code-12.json')
+    fetch('/assets/data/helper/code-12..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode12(html)
       })
-    fetch('/assets/data/helper/code-13.json')
+    fetch('/assets/data/helper/code-13..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode13(html)
       })
-    fetch('/assets/data/helper/code-14.json')
+    fetch('/assets/data/helper/code-14..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode14(html)
       })
-    fetch('/assets/data/helper/code-15.json')
+    fetch('/assets/data/helper/code-15..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode15(html)
       })
-    fetch('/assets/data/helper/code-16.json')
+    fetch('/assets/data/helper/code-16..json', option)
       .then(function (response) {
         return response.text()
       })

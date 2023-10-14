@@ -8,7 +8,12 @@ function LayoutFixedFooter() {
   const [code1, setCode1] = useState()
 
   useEffect(() => {
-    fetch('/assets/data/layout/fixed-footer-code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/layout/fixed-footer-code-1..json', option)
       .then(function (response) {
         return response.text()
       })

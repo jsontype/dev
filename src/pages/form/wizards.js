@@ -9,21 +9,26 @@ function FormWizards() {
   const [code3, setCode3] = useState()
 
   useEffect(() => {
-    fetch('/assets/data/form/wizard-code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/form/wizard-code-1..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode1(html)
       })
-    fetch('/assets/data/form/wizard-code-2.json')
+    fetch('/assets/data/form/wizard-code-2..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode2(html)
       })
-    fetch('/assets/data/form/wizard-code-3.json')
+    fetch('/assets/data/form/wizard-code-3..json', option)
       .then(function (response) {
         return response.text()
       })

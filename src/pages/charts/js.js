@@ -248,42 +248,47 @@ function ChartJs() {
   }
 
   useEffect(() => {
-    fetch('/assets/data/chart/chartjs-code-1.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/chart/chartjs-code-1..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode1(html)
       })
-    fetch('/assets/data/chart/chartjs-code-2.json')
+    fetch('/assets/data/chart/chartjs-code-2..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode2(html)
       })
-    fetch('/assets/data/chart/chartjs-code-3.json')
+    fetch('/assets/data/chart/chartjs-code-3..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode3(html)
       })
-    fetch('/assets/data/chart/chartjs-code-4.json')
+    fetch('/assets/data/chart/chartjs-code-4..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode4(html)
       })
-    fetch('/assets/data/chart/chartjs-code-5.json')
+    fetch('/assets/data/chart/chartjs-code-5..json', option)
       .then(function (response) {
         return response.text()
       })
       .then(html => {
         setCode5(html)
       })
-    fetch('/assets/data/chart/chartjs-code-6.json')
+    fetch('/assets/data/chart/chartjs-code-6..json', option)
       .then(function (response) {
         return response.text()
       })

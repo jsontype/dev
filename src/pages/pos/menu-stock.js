@@ -36,7 +36,12 @@ function PosMenuStock() {
     context.setAppContentFullHeight(true)
     context.setAppContentClass('p-1 ps-xl-4 pe-xl-4 pt-xl-3 pb-xl-3')
 
-    fetch('/assets/data/pos/menu-stock.json')
+    const option = {
+      headers: {
+        "Accept": "application/json",
+      },
+    }
+    fetch('/assets/data/pos/menu-stock..json', option)
       .then(res => res.json())
       .then(result => {
         setStockData(result)
