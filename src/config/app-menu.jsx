@@ -18,10 +18,10 @@ const Menu = [
   {
     path: '/pos',
     icon: 'bi bi-bag-check',
-    title: 'POS System',
+    title: 'My Toy Projects',
     highlight: true,
     children: [
-      { path: '/pos/customer-order', title: 'Customer Order' },
+      { path: '/pos/movie-app', title: 'Movie App' },
       { path: '/pos/kitchen-order', title: 'Kitchen Order' },
       { path: '/pos/counter-checkout', title: 'Counter Checkout' },
       { path: '/pos/table-booking', title: 'Table Booking' },

@@ -120,13 +120,13 @@ function Header() {
               </div>
               <div className="col-4">
                 <Link
-                  to="/pos/customer-order"
+                  to="/pos/movie-app"
                   className="dropdown-item text-decoration-none p-3 bg-none"
                 >
                   <div>
                     <i className="bi bi-hdd-network h2 opacity-5 d-block my-1"></i>
                   </div>
-                  <div className="fw-500 fs-10px text-inverse">POS SYSTEM</div>
+                  <div className="fw-500 fs-10px text-inverse">My Toy Projects</div>
                 </Link>
               </div>
               <div className="col-4">

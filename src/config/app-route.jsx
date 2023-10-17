@@ -8,7 +8,7 @@ import EmailInbox from './../pages/email/inbox.js'
 import EmailCompose from './../pages/email/compose.js'
 import EmailDetail from './../pages/email/detail.js'
 import Widgets from './../pages/widgets/widgets.js'
-import PosCustomerOrder from './../pages/pos/customer-order.js'
+import ToyMovieApp from './../pages/pos/movie-app.js'
 import PosKitchenOrder from './../pages/pos/kitchen-order.js'
 import PosCounterCheckout from './../pages/pos/counter-checkout.js'
 import PosTableBooking from './../pages/pos/table-booking.js'
@@ -75,7 +75,7 @@ const AppRoute = [
       {
         path: 'pos/*',
         children: [
-          { path: 'customer-order', element: <PosCustomerOrder /> },
+          { path: 'movie-app', element: <ToyMovieApp /> },
           { path: 'kitchen-order', element: <PosKitchenOrder /> },
           { path: 'counter-checkout', element: <PosCounterCheckout /> },
           { path: 'table-booking', element: <PosTableBooking /> },

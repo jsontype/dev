@@ -1,14 +1,14 @@
 import React, { useEffect, useContext, useState } from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import { Link } from 'react-router-dom'
-import { Card, CardBody } from './../../components/card/card.jsx'
-import { AppSettings } from './../../config/app-settings.js'
+import { Card, CardBody } from '../../components/card/card.jsx'
+import { AppSettings } from '../../config/app-settings.js'
 import { Modal } from 'bootstrap'
 
-function PosCustomerOrder() {
+function ToyMovieApp() {
   const context = useContext(AppSettings)
   const [posMobileSidebarToggled, setPosMobileSidebarToggled] = useState(false)
-  const [categoryType, setCategoryType] = useState('all')
+  const [categoryType, setCategoryType] = useState('All')
   const [tableData, setTableData] = useState([])
   const [orderData, setOrderData] = useState([])
   const [orderHistoryData, setOrderHistoryData] = useState([])
@@ -17,6 +17,16 @@ function PosCustomerOrder() {
   const [modalQuantity, setModalQuantity] = useState()
   const [modalSelectedSize, setModalSelectedSize] = useState()
   const [modalSelectedAddon, setModalSelectedAddon] = useState([])
+  // ***! 카테고리 추가하기 : 나중에 아이콘 수정해야함!
+  const [categoryData, setCategoryData] = useState([
+    { icon: 'fa fa-fw fa-utensils', text: 'All', type: 'All', active: true },
+    { icon: 'fa fa-fw fa-drumstick-bite', text: 'Action', type: 'Action' },
+    { icon: 'fa fa-fw fa-hamburger', text: 'Comedy', type: 'Comedy' },
+    { icon: 'fa fa-fw fa-pizza-slice', text: 'Reality-TV', type: 'Reality-TV' },
+    { icon: 'fa fa-fw fa-cocktail', text: 'Sport', type: 'Sport' },
+    { icon: 'fa fa-fw fa-ice-cream', text: 'Talk-Show', type: 'Talk-Show' },
+    { icon: 'fa fa-fw fa-cookie-bite', text: 'Documentary', type: 'Documentary' },
+  ])
 
   var toggleMobileSidebar = event => {
     event.preventDefault()
@@ -33,12 +43,12 @@ function PosCustomerOrder() {
   var showType = (event, type) => {
     event.preventDefault()
 
-    if (tableData && tableData.food) {
-      for (var i = 0; i < tableData.food.length; i++) {
-        if (tableData.food[i].type === type || type === 'all') {
-          tableData.food[i].hide = false
+    if (tableData && tableData.movies) {
+      for (var i = 0; i < tableData.movies.length; i++) {
+        if (tableData.movies[i].genres[0] === type || type === 'All') {
+          tableData.movies[i].hide = false
         } else {
-          tableData.food[i].hide = true
+          tableData.movies[i].hide = true
         }
       }
 
@@ -257,12 +267,29 @@ function PosCustomerOrder() {
 
     setModal(new Modal(document.getElementById('modalPosItem')))
 
-    fetch('/assets/data/pos/customer-order.json')
+    // fetch('/assets/data/pos/movie-app.json')
+    //   .then(res => res.json())
+    //   .then(result => {
+    //     setTableData(result)
+    //     setOrderData(result.order)
+    //     setOrderHistoryData(result.history)
+    //   })
+
+    // ***! 영화 데이터 가져오기 : https://yts.mx/api/v2/list_movies.json?sort_by=rating
+    fetch('/assets/data/pos/movie-app.json')
       .then(res => res.json())
       .then(result => {
-        setTableData(result)
+        // console.log('food result: ', result)
+        // setTableData(result)
         setOrderData(result.order)
         setOrderHistoryData(result.history)
+      })
+
+    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
+      .then(res => res.json())
+      .then(result => {
+        // console.log('movie result: ', result.data)
+        setTableData(result.data)
       })
 
     return function cleanUp() {
@@ -279,8 +306,7 @@ function PosCustomerOrder() {
     <div className="h-100">
       <Card
         className={'pos ' + (posMobileSidebarToggled ? 'pos-mobile-sidebar-toggled' : '')}
-        id="pos"
-      >
+        id="pos">
         <CardBody className="pos-container">
           <div className="pos-menu">
             <div className="logo">
@@ -295,14 +321,13 @@ function PosCustomerOrder() {
               <PerfectScrollbar className="h-100">
                 <ul className="nav nav-tabs">
                   {tableData &&
-                    tableData.category &&
-                    tableData.category.map((category, index) => (
+                    categoryData &&
+                    categoryData.map((category, index) => (
                       <li className="nav-item" key={index}>
                         <a
                           className={'nav-link' + (category.type === categoryType ? ' active' : '')}
                           onClick={event => showType(event, category.type)}
-                          href="#/"
-                        >
+                          href="#/">
                           <Card>
                             <CardBody>
                               <i className={category.icon}></i> {category.text}
@@ -318,37 +343,53 @@ function PosCustomerOrder() {
 
           <div className="pos-content">
             <PerfectScrollbar className="pos-content-container h-100 p-4">
+              {/* ***! 메인컨텐츠 상단 */}
               <div className="row gx-4">
-                {tableData && tableData.food ? (
-                  tableData.food.map((food, index) => (
+                {/* {console.log("tableData: ", tableData)} */}
+                {tableData && tableData.movies ? (
+                  tableData.movies.map((movie, index) => (
                     <div
                       className={
                         'col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4' +
-                        (food.hide ? ' d-none' : '')
+                        (movie.hide ? ' d-none' : '')
                       }
+                      key={index}>
+                      {/* <div
+                      className={'col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4'}
                       key={index}
-                    >
+                    > */}
                       <Card className="h-100">
                         <CardBody className="h-100 p-1">
                           <a
                             href="#/"
-                            className={'pos-product' + (!food.available ? ' not-available' : '')}
-                            onClick={event => showPosItemModal(event, food)}
+                            // ***! 아래는 나중에 살려야함. 왼쪽사이드 카테고리별로 보이냐 안보이냐 설정임.
+                            // className={'pos-product' + (!food.available ? ' not-available' : '')}
+                            className={'pos-product'}
+                            // ***! 아래는 나중에 살려야함. 무비아이템 클릭했을 경우에 모달창 띄우기임.
+                            // onClick={event => showPosItemModal(event, movie)}
                           >
+                            {/* ***! 각 아이템 상단 */}
                             <div
                               className="img"
-                              style={{ backgroundImage: 'url(' + food.image + ')' }}
-                            ></div>
+                              style={{
+                                backgroundImage: 'url(' + movie.large_cover_image + ')',
+                              }}></div>
                             <div className="info">
-                              <div className="title">{food.price}</div>
-                              <div className="desc">{food.description}</div>
-                              <div className="price">${food.price}</div>
+                              <div className="title">{movie.title}</div>
+                              <div className="desc">{movie.genres[0]}</div>
+                              <div className="desc">
+                                Summary :{' '}
+                                {movie.summary.length > 100
+                                  ? movie.summary.substring(0, 100) + '...'
+                                  : movie.summary}
+                              </div>
+                              <div className="price">Rating : {movie.rating} / 10</div>
                             </div>
-                            {!food.available && (
+                            {/* {!title.available && (
                               <div className="not-available-text">
                                 <div>Not Available</div>
                               </div>
-                            )}
+                            )} */}
                           </a>
                         </CardBody>
                       </Card>
@@ -361,6 +402,7 @@ function PosCustomerOrder() {
             </PerfectScrollbar>
           </div>
 
+          {/* ***! 우측 사이드 메뉴 */}
           <div className="pos-sidebar" id="pos-sidebar">
             <div className="h-100 d-flex flex-column p-0">
               <div className="pos-sidebar-header">
@@ -387,8 +429,7 @@ function PosCustomerOrder() {
                       className="nav-link active"
                       href="#/"
                       data-bs-toggle="tab"
-                      data-bs-target="#newOrderTab"
-                    >
+                      data-bs-target="#newOrderTab">
                       New Order ({getOrderTotal()})
                     </a>
                   </li>
@@ -397,8 +438,7 @@ function PosCustomerOrder() {
                       className="nav-link"
                       href="#/"
                       data-bs-toggle="tab"
-                      data-bs-target="#orderHistoryTab"
-                    >
+                      data-bs-target="#orderHistoryTab">
                       Order History ({getOrderHistoryTotal()})
                     </a>
                   </li>
@@ -413,8 +453,7 @@ function PosCustomerOrder() {
                         <div className="pos-order-product">
                           <div
                             className="img"
-                            style={{ backgroundImage: 'url(' + order.image + ')' }}
-                          ></div>
+                            style={{ backgroundImage: 'url(' + order.image + ')' }}></div>
                           <div className="flex-1">
                             <div className="h6 mb-1">{order.title}</div>
                             <div className="small">${order.price}</div>
@@ -430,8 +469,7 @@ function PosCustomerOrder() {
                               <a
                                 href="#/"
                                 className="btn btn-outline-theme btn-sm"
-                                onClick={event => deductQty(event, order.id)}
-                              >
+                                onClick={event => deductQty(event, order.id)}>
                                 <i className="fa fa-minus"></i>
                               </a>
                               <input
@@ -443,8 +481,7 @@ function PosCustomerOrder() {
                               <a
                                 href="#/"
                                 className="btn btn-outline-theme btn-sm"
-                                onClick={event => addQty(event, order.id)}
-                              >
+                                onClick={event => addQty(event, order.id)}>
                                 <i className="fa fa-plus"></i>
                               </a>
                             </div>
@@ -455,8 +492,7 @@ function PosCustomerOrder() {
                           <div className="text-end mt-auto">
                             <button
                               onClick={event => toggleConfirmation(event, order.id, true)}
-                              className="btn btn-sm btn-outline-gray-500"
-                            >
+                              className="btn btn-sm btn-outline-gray-500">
                               <i className="fa fa-trash"></i>
                             </button>
                           </div>
@@ -470,14 +506,12 @@ function PosCustomerOrder() {
                             <div>
                               <button
                                 onClick={event => toggleConfirmation(event, order.id, false)}
-                                className="btn btn-outline-white btn-sm ms-auto me-2 width-100px"
-                              >
+                                className="btn btn-outline-white btn-sm ms-auto me-2 width-100px">
                                 No
                               </button>
                               <button
                                 onClick={event => removeOrder(event, order.id)}
-                                className="btn btn-outline-theme btn-sm width-100px"
-                              >
+                                className="btn btn-outline-theme btn-sm width-100px">
                                 Yes
                               </button>
                             </div>
@@ -491,8 +525,7 @@ function PosCustomerOrder() {
                         <div className="mb-3 mt-n5">
                           <i
                             className="bi bi-bag text-white text-opacity-50"
-                            style={{ fontSize: '6em' }}
-                          ></i>
+                            style={{ fontSize: '6em' }}></i>
                         </div>
                         <h5>No order found</h5>
                       </div>
@@ -510,8 +543,7 @@ function PosCustomerOrder() {
                           viewBox="0 0 16 16"
                           className="text-gray-300"
                           fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                          xmlns="http://www.w3.org/2000/svg">
                           <path
                             fillRule="evenodd"
                             d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z"
@@ -577,16 +609,14 @@ function PosCustomerOrder() {
                 <CardBody className="p-0">
                   <button
                     data-bs-dismiss="modal"
-                    className="btn-close position-absolute top-0 end-0 m-4"
-                  >
+                    className="btn-close position-absolute top-0 end-0 m-4">
                     &nbsp;
                   </button>
                   <div className="modal-pos-product">
                     <div className="modal-pos-product-img">
                       <div
                         className="img"
-                        style={{ backgroundImage: 'url(' + modalData.image + ')' }}
-                      ></div>
+                        style={{ backgroundImage: 'url(' + modalData.image + ')' }}></div>
                     </div>
                     <div className="modal-pos-product-info">
                       <div className="h4 mb-2">{modalData.title}</div>
@@ -595,8 +625,7 @@ function PosCustomerOrder() {
                       <div className="d-flex mb-3">
                         <button
                           className="btn btn-outline-theme"
-                          onClick={event => deductModalQty(event)}
-                        >
+                          onClick={event => deductModalQty(event)}>
                           <i className="fa fa-minus"></i>
                         </button>
                         <input
@@ -607,8 +636,7 @@ function PosCustomerOrder() {
                         />
                         <button
                           className="btn btn-outline-theme"
-                          onClick={event => addModalQty(event)}
-                        >
+                          onClick={event => addModalQty(event)}>
                           <i className="fa fa-plus"></i>
                         </button>
                       </div>
@@ -665,16 +693,14 @@ function PosCustomerOrder() {
                         <div className="col-4">
                           <button
                             className="btn btn-default h4 mb-0 d-block w-100 rounded-0 py-3"
-                            data-bs-dismiss="modal"
-                          >
+                            data-bs-dismiss="modal">
                             Cancel
                           </button>
                         </div>
                         <div className="col-8">
                           <button
                             className="btn btn-success w-100 d-flex justify-content-center align-items-center rounded-0 py-3 h4 m-0"
-                            onClick={event => addToCart(event)}
-                          >
+                            onClick={event => addToCart(event)}>
                             Add to cart <i className="bi bi-plus fa-2x ms-2 my-n3"></i>
                           </button>
                         </div>
@@ -691,4 +717,4 @@ function PosCustomerOrder() {
   )
 }
 
-export default PosCustomerOrder
+export default ToyMovieApp
