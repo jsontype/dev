@@ -20,9 +20,9 @@ function ToyMovieApp() {
   // ***! 카테고리 추가하기 : 나중에 아이콘 수정해야함!
   const [categoryData, setCategoryData] = useState([
     { icon: 'fa fa-fw fa-utensils', text: 'All', type: 'All', active: true },
-    { icon: 'fa fa-fw fa-drumstick-bite', text: 'Action', type: 'Action' },
-    { icon: 'fa fa-fw fa-hamburger', text: 'Comedy', type: 'Comedy' },
-    { icon: 'fa fa-fw fa-pizza-slice', text: 'Reality-TV', type: 'Reality-TV' },
+    { icon: 'fa fa-fw fa-drumstick-bite', text: 'Family', type: 'Family' },
+    { icon: 'fa fa-fw fa-hamburger', text: 'Music', type: 'Music' },
+    { icon: 'fa fa-fw fa-pizza-slice', text: 'Drama', type: 'Drama' },
     { icon: 'fa fa-fw fa-cocktail', text: 'Sport', type: 'Sport' },
     { icon: 'fa fa-fw fa-ice-cream', text: 'Talk-Show', type: 'Talk-Show' },
     { icon: 'fa fa-fw fa-cookie-bite', text: 'Documentary', type: 'Documentary' },
@@ -45,11 +45,17 @@ function ToyMovieApp() {
 
     if (tableData && tableData.movies) {
       for (var i = 0; i < tableData.movies.length; i++) {
-        if (tableData.movies[i].genres[0] === type || type === 'All') {
-          tableData.movies[i].hide = false
-        } else {
-          tableData.movies[i].hide = true
-        }
+        // console.log('tableData.movies[i].genres: ', tableData.movies[i].genres)
+        const genres = tableData.movies[i].genres
+        genres.forEach(genre => {
+          // console.log('genre: ', genre)
+          // console.log('type: ', type)
+          if (genre === type || type === 'All') {
+            tableData.movies[i].hide = false
+          } else {
+            tableData.movies[i].hide = true
+          }
+        })
       }
 
       setTableData(tableData)
@@ -57,11 +63,11 @@ function ToyMovieApp() {
     }
   }
 
-  var showPosItemModal = (event, food) => {
+  var showPosItemModal = (event, movie) => {
     event.preventDefault()
 
-    if (food.available) {
-      setModalData(food)
+    if (movie) {
+      setModalData(movie)
       setModalQuantity(1)
       setModalSelectedAddon([])
 
@@ -285,10 +291,11 @@ function ToyMovieApp() {
         setOrderHistoryData(result.history)
       })
 
-    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
+    // ***! 영화 상세 데이터 가져오기
+    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating&limit=1000&page=2')
       .then(res => res.json())
       .then(result => {
-        // console.log('movie result: ', result.data)
+        console.log('***! movie result: ', result.data)
         setTableData(result.data)
       })
 
@@ -314,7 +321,7 @@ function ToyMovieApp() {
                 <div className="logo-img">
                   <i className="bi bi-x-diamond" style={{ fontSize: '2.1rem' }}></i>
                 </div>
-                <div className="logo-text">Pine & Dine</div>
+                <div className="logo-text">Go To Home</div>
               </Link>
             </div>
             <div className="nav-container">
@@ -366,8 +373,8 @@ function ToyMovieApp() {
                             // className={'pos-product' + (!food.available ? ' not-available' : '')}
                             className={'pos-product'}
                             // ***! 아래는 나중에 살려야함. 무비아이템 클릭했을 경우에 모달창 띄우기임.
-                            // onClick={event => showPosItemModal(event, movie)}
-                          >
+                            onClick={event => showPosItemModal(event, movie)}>
+                            {/* // onClick={() => alert('test')}> */}
                             {/* ***! 각 아이템 상단 */}
                             <div
                               className="img"
@@ -375,8 +382,10 @@ function ToyMovieApp() {
                                 backgroundImage: 'url(' + movie.large_cover_image + ')',
                               }}></div>
                             <div className="info">
-                              <div className="title">{movie.title}</div>
-                              <div className="desc">{movie.genres[0]}</div>
+                              <div className="title">
+                                {movie.title} ({movie.year})
+                              </div>
+                              <div className="desc">{movie.genres.join(', ')}</div>
                               <div className="desc">
                                 Summary :{' '}
                                 {movie.summary.length > 100
@@ -384,6 +393,7 @@ function ToyMovieApp() {
                                   : movie.summary}
                               </div>
                               <div className="price">Rating : {movie.rating} / 10</div>
+                              <div className="price">Runtime : {movie.runtime} minutes</div>
                             </div>
                             {/* {!title.available && (
                               <div className="not-available-text">
@@ -601,8 +611,9 @@ function ToyMovieApp() {
         <span className="badge">{getOrderTotal()}</span>
       </a>
 
+      {/* 아이템 상세화면 모달 */}
       <div className="modal modal-pos fade" id="modalPosItem">
-        <div className="modal-dialog modal-lg">
+        <div className="modal-dialog modal-xl">
           <div className="modal-content border-0">
             {modalData && (
               <Card>
@@ -616,13 +627,19 @@ function ToyMovieApp() {
                     <div className="modal-pos-product-img">
                       <div
                         className="img"
-                        style={{ backgroundImage: 'url(' + modalData.image + ')' }}></div>
+                        style={{
+                          backgroundImage: 'url(' + modalData.large_cover_image + ')',
+                        }}></div>
                     </div>
                     <div className="modal-pos-product-info">
                       <div className="h4 mb-2">{modalData.title}</div>
-                      <div className="text-white text-opacity-50 mb-2">{modalData.description}</div>
-                      <div className="h4 mb-3">${modalData.price}</div>
-                      <div className="d-flex mb-3">
+                      <div className="text-white text-opacity-50 mb-2">
+                        {modalData.description_full.length > 3000
+                          ? modalData.description_full.substring(0, 3000) + ' ...'
+                          : modalData.description_full}
+                      </div>
+                      {/* <div className="h4 mb-3">${modalData.price}</div> */}
+                      {/* <div className="d-flex mb-3">
                         <button
                           className="btn btn-outline-theme"
                           onClick={event => deductModalQty(event)}>
@@ -639,9 +656,9 @@ function ToyMovieApp() {
                           onClick={event => addModalQty(event)}>
                           <i className="fa fa-plus"></i>
                         </button>
-                      </div>
+                      </div> */}
                       <hr className="mx-n4" />
-                      {modalData && modalData.options && modalData.options.size && (
+                      {/* {modalData && modalData.options && modalData.options.size && (
                         <div className="mb-2">
                           <div className="fw-bold">Size:</div>
                           <div className="option-list">
@@ -664,8 +681,8 @@ function ToyMovieApp() {
                             ))}
                           </div>
                         </div>
-                      )}
-                      {modalData && modalData.options && modalData.options.addon && (
+                      )} */}
+                      {/* {modalData && modalData.options && modalData.options.addon && (
                         <div className="mb-2">
                           <div className="fw-bold">Add On:</div>
                           <div className="option-list">
@@ -687,7 +704,7 @@ function ToyMovieApp() {
                             ))}
                           </div>
                         </div>
-                      )}
+                      )} */}
                       <hr className="mx-n4" />
                       <div className="row">
                         <div className="col-4">
